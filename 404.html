@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found - Woods & Spices Restaurant">
+    <meta name="keywords" content="404, error, page not found, Woods & Spices">
+    <meta name="author" content="Woods & Spices Restaurant">
+    <title>404 - Page Not Found | Woods & Spices</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4d12bdc1ee.js" crossorigin="anonymous" defer></script>
+    <style>
+        /* Premium 404 Styles */
+        .page-not-found-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 85vh;
+            padding: 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('./assets/bgimg.jpg') center/cover no-repeat;
+            position: relative;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            color: #fff;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .icon-wrapper {
+            font-size: 4rem;
+            color: var(--hunyadi-yellow);
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            line-height: 1;
+            margin: 0;
+            font-family: var(--font-heading);
+            background: linear-gradient(135deg, #ffffff 30%, var(--hunyadi-yellow) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .error-title {
+            font-size: 2.2rem;
+            font-family: var(--font-heading);
+            margin: 10px 0 20px;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .error-message {
+            font-size: 1.1rem;
+            font-family: var(--font-body);
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 35px;
+            background: linear-gradient(135deg, var(--auburn) 0%, var(--dark-garnet) 100%);
+            color: #fff;
+            text-decoration: none;
+            font-family: var(--font-ui);
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(148, 27, 12, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(148, 27, 12, 0.6);
+            background: linear-gradient(135deg, var(--dark-garnet) 0%, #4a0f08 100%);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .error-code { font-size: 5rem; }
+            .error-title { font-size: 1.8rem; }
+            .glass-card { padding: 40px 20px; }
+        }
+    </style>
+</head>
+
+<body>
+    <header role="banner">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="./assets/logo.png" alt="Woods & Spices Restaurant Logo">
+                    <span class="brand-name">WOODS & SPICES</span>
+                </a>
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span></label>
+            <ul class="nav-links" role="menubar"><li class="mobile-close"><label for="nav-toggle" class="close-btn">&times;</label></li>
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                <li role="none"><a href="heritage.html" role="menuitem">Heritage Dining</a></li>
+                <li role="none"><a href="about.html" role="menuitem">About</a></li>
+                <li role="none"><a href="menu.html" role="menuitem">Menu</a></li>
+                <li role="none"><a href="services.html" role="menuitem">Services</a></li>
+                <li role="none"><a href="home-2.html" role="menuitem">Catering</a></li>
+                <li role="none"><a href="blog.html" role="menuitem">Blog</a></li>
+                <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+                <li role="none"><a href="./cart.html" class="cart-link" role="menuitem" aria-label="Shopping cart"><i
+                            class="fa-solid fa-cart-arrow-down" aria-hidden="true"></i><span class="cart-badge"
+                            aria-live="polite">0</span></a></li>
+                <li role="none"><button class="account-btn" aria-label="User account" id="accountBtn"><i
+                            class="fa-solid fa-user" aria-hidden="true"></i></button></li>
+            </ul>
+            <div class="user-dropdown" role="menu" aria-label="User menu" id="userDropdown">
+                <button type="button" data-action="login">Login</button>
+                <button type="button" data-action="signup">Sign Up</button>
+                <button type="button" data-action="dashboard" style="display: none;">Dashboard</button>
+                <button type="button" data-action="logout" style="display: none;">Logout</button>
+            </div>
+        
+            <div class="nav-overlay"></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-not-found-section">
+            <div class="glass-card">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-utensils" style="position: relative;">
+                        <i class="fa-solid fa-slash" style="position: absolute; left: 0; top: 0; font-size: 1.1em; color: var(--auburn); opacity: 0.8;"></i>
+                    </i>
+                </div>
+                <h1 class="error-code">404</h1>
+                <h2 class="error-title">Table Not Set</h2>
+                <p class="error-message">Looks like this dish isn't on our menu. The page you are looking for has been moved or doesn't exist.</p>
+                <a href="./index.html" class="btn-home">Return to Homepage <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-column footer-brand">
+                <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="./assets/logo.png" alt="Woods & Spices Logo" style="height: 50px;">
+                    <span class="brand-name">WOODS & SPICES</span>
+                </a>
+                </div>
+                <p>Every dish we serve is crafted with care, flavor, and heart. Experience the true essence of fine
+                    dining.</p>
+            </div>
+            <div class="footer-column footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+                    <li><a href="menu.html"><i class="fa-solid fa-chevron-right"></i> Menu</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Services</a></li>
+                    <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Mount Road, Mylapore, Chennai</p>
+                <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fa-solid fa-envelope"></i> hello@woodandspice.com</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-column footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get the latest updates and offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">GO</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Woods & Spices. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;">Designed by <strong>MR CODERS HUB</strong></p>
+        </div>
+    </footer>
+
+    <!-- Authentication Modal -->
+    <div id="authModal" class="auth-modal">
+        <div class="auth-modal-content">
+            <span class="auth-close">&times;</span>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form">
+                <h2>Login</h2>
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="auth-btn">Login</button>
+                <p id="loginError" class="error-message"></p>
+                <p class="switch-form">Don't have an account? <a href="#" onclick="auth.showSignupForm()">Sign up</a>
+                </p>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="auth-form" style="display: none;">
+                <h2>Sign Up</h2>
+                <div class="form-group">
+                    <label for="signupName">Name:</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <button type="submit" class="auth-btn">Sign Up</button>
+                <p id="signupError" class="error-message"></p>
+                <p class="switch-form">Already have an account? <a href="#" onclick="auth.showLoginForm()">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/cart.js"></script>
+<script src="assets/js/nav-script.js"></script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Woods & Spices Heritage - Preserving ancestral Indian recipes, spice traditions, and slow-cooked regional dishes. Experience authentic Indian dining.">
+    <title>Woods & Spices – Heritage Indian Cuisine</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/card-fixes.css">
+    <link rel="stylesheet" href="assets/css/contact-premium.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Lato:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4d12bdc1ee.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body>
+    <header role="banner">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="./assets/logo.png" alt="Woods & Spices Restaurant Logo">
+                    <span class="brand-name">WOODS & SPICES</span>
+                </a>
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <ul class="nav-links" role="menubar">
+                <li class="mobile-close"><label for="nav-toggle" class="close-btn">&times;</label></li>
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                <li role="none"><a href="heritage.html" class="active" role="menuitem">Home2</a></li>
+                <li role="none"><a href="about.html" role="menuitem">About</a></li>
+                <li role="none"><a href="menu.html" role="menuitem">Menu</a></li>
+                <li role="none"><a href="services.html" role="menuitem">Services</a></li>
+                <li role="none"><a href="home-2.html" role="menuitem">Catering</a></li>
+                <li role="none"><a href="blog.html" role="menuitem">Blog</a></li>
+                <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="./cart.html" class="cart-link" role="button" aria-label="Shopping cart">
+                    <i class="fa-solid fa-cart-arrow-down" aria-hidden="true"></i>
+                    <span class="cart-badge" aria-live="polite">0</span>
+                </a>
+                <button class="account-btn" aria-label="User account" id="accountBtn">
+                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                </button>
+                <label for="nav-toggle" class="nav-toggle-label" aria-label="Open Menu">
+                    <span></span>
+                </label>
+            </div>
+            <div class="user-dropdown" role="menu" aria-label="User menu" id="userDropdown">
+                <button type="button" data-action="login">Login</button>
+                <button type="button" data-action="signup">Sign Up</button>
+                <button type="button" data-action="dashboard" style="display: none;">Dashboard</button>
+                <button type="button" data-action="logout" style="display: none;">Logout</button>
+            </div>
+            <div class="nav-overlay"></div>
+        </nav>
+    </header>
+    <script src="assets/js/nav-script.js"></script>
+    <main id="main-content" role="main">
+        <!-- SECTION 1: HERO -->
+        <section class="heritage-hero" style="padding: 150px 0;">
+            <div class="heritage-content">
+                <h1 class="heritage-title">
+                    <span>Est. 1947</span>
+                    A Heritage of Indian Flavors,<br>Preserved with Pride
+                </h1>
+                <p class="heritage-subtitle">
+                    From ancestral recipes to hand-ground spices, every dish carries generations of tradition.
+                </p>
+                <div class="heritage-cta-wrapper">
+                    <a href="#heritage-menu" class="btn-heritage-primary">Explore Heritage Menu</a>
+                    <a href="#our-story" class="btn-heritage-secondary">Our Culinary Story</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: WHAT MAKES IT HERITAGE -->
+        <section class="heritage-features">
+            <div class="container">
+                <h2 class="section-title">The Pillars of Heritage</h2>
+                <div class="decorative-line" style="margin: 0 auto;"></div>
+                <i class="fa-solid fa-seedling spot-illustration"
+                    style="top: 20px; left: 20px; font-size: 8rem; opacity: 0.05;"></i>
+                <div class="heritage-icon-grid">
+                    <div class="heritage-icon-item">
+                        <div class="heritage-icon-wrapper">
+                            <i class="fa-solid fa-scroll"></i>
+                        </div>
+                        <h3>Ancestral Recipes</h3>
+                        <p>We strictly follow recipes passed down through four generations, refusing to alter the soul
+                            of the dish.</p>
+                    </div>
+                    <div class="heritage-icon-item">
+                        <div class="heritage-icon-wrapper">
+                            <i class="fa-solid fa-mortar-pestle"></i>
+                        </div>
+                        <h3>Stone-Ground Spices</h3>
+                        <p>Our masalas are hand-pounded daily in stone mortars to preserve their essential oils and
+                            aroma.</p>
+                    </div>
+                    <div class="heritage-icon-item">
+                        <div class="heritage-icon-wrapper">
+                            <i class="fa-solid fa-fire-burner"></i>
+                        </div>
+                        <h3>Slow Cooking Traditions</h3>
+                        <p>We cook over open charcoal fires and in clay pots, allowing flavors to mature slowly over
+                            hours.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: SIGNATURE HERITAGE DISHES -->
+        <section class="heritage-menu-section" id="heritage-menu">
+            <div class="container">
+                <div class="section-header-center" style="margin: 60px 0px;">
+                    <h2 style="color: var(--ceramic-yellow); text-align: center;">Timeless Creations</h2>
+                    <p style="color: rgba(255,255,255,0.7); text-align: center;">Dishes that tell the story of India's
+                        royal kitchens.</p>
+                </div>
+
+                <div class="heritage-dish-list">
+                    <!-- Dish 1 -->
+                    <div class="heritage-dish-card">
+                        <div class="heritage-dish-info">
+                            <div class="heritage-dish-meta">
+                                <h3 class="heritage-dish-title">Nihari Gosht</h3>
+                                <span class="heritage-dish-region">Lucknow</span>
+                            </div>
+                            <p class="heritage-dish-story">
+                                Originally served to the Nawabs of Lucknow for breakfast, this slow-cooked lamb stew
+                                simmers for 12 hours with over 50 spices.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Dish 2 -->
+                    <div class="heritage-dish-card">
+                        <div class="heritage-dish-info">
+                            <div class="heritage-dish-meta">
+                                <h3 class="heritage-dish-title">Laal Maas</h3>
+                                <span class="heritage-dish-region">Rajasthan</span>
+                            </div>
+                            <p class="heritage-dish-story">
+                                A fiery warrior's dish from Rajasthan, prepared with Mathania chilies and smoked with
+                                clove to honor the hunting traditions of Rajputana.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Dish 3 -->
+                    <div class="heritage-dish-card">
+                        <div class="heritage-dish-info">
+                            <div class="heritage-dish-meta">
+                                <h3 class="heritage-dish-title">Meen Pollichathu</h3>
+                                <span class="heritage-dish-region">Kerala</span>
+                            </div>
+                            <p class="heritage-dish-story">
+                                Pearl Spot fish marinated in a rich shallot masala, wrapped in banana leaves, and
+                                grilled to seal in the steam and flavor of the backwaters.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 40px;">
+                        <a href="menu.html" class="btn-heritage-secondary">View Full Heritage Menu</a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: INGREDIENT PROVENANCE -->
+        <section class="provenance-split">
+            <div class="provenance-img">
+                <div class="image-frame"></div>
+            </div>
+            <div class="provenance-content">
+                <i class="fa-solid fa-wheat-awn spot-illustration"></i>
+                <h2>Honoring the Source</h2>
+                <p>True flavor begins before the cooking starts. It begins in the soil. We partner directly with farmers
+                    who still practice traditional agriculture.</p>
+                <ul class="provenance-list">
+                    <li><i class="fa-solid fa-seedling"></i> Saffron from Pampore, Kashmir</li>
+                    <li><i class="fa-solid fa-pepper-hot"></i> Black Pepper from Tellicherry</li>
+                    <li><i class="fa-solid fa-leaf"></i> Ghee churned from Gir Cow milk</li>
+                </ul>
+                <a href="about.html" class="btn-text-heritage"
+                    style="color:#8B4513; margin-top:30px; display:inline-block;">Discover Our Sourcing Philosophy</a>
+            </div>
+        </section>
+
+        <!-- SECTION 5: CULTURAL DINING EXPERIENCE -->
+        <section class="heritage-experience">
+            <div class="container">
+                <h2>More Than a Meal —<br>A Cultural Experience</h2>
+                <p>
+                    Dining at Woods & Spices is a ritual. From the bronze Kansa dinnerware known for its health benefits
+                    to the ambient ragas playing in the background, we transport you to an era of unhurried luxury.
+                </p>
+                <a href="booking.html" class="btn-heritage-primary">Reserve a Heritage Table</a>
+            </div>
+        </section>
+
+        <!-- SECTION 6: CHEF & LEGACY -->
+        <section class="chef-legacy" id="our-story">
+            <div class="chef-legacy-content">
+                <h2>The Custodian of Taste</h2>
+                <span class="chef-name">Chef Arjun Rathore</span>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: #555;">
+                    Chef Arjun doesn't believe in inventing new dishes. He believes in rescuing lost ones. With over 30
+                    years spent traveling to India's remote villages, he has documented and revived recipes that were on
+                    the verge of extinction.
+                </p>
+                <div class="chef-quote">
+                    "We are not just cooking food; we are archiving history on a plate. Trend-chasing fades, but
+                    tradition is eternal."
+                </div>
+            </div>
+            <div class="chef-legacy-img">
+                <!-- Using generic chef or about image if specific not available -->
+                <img src="./assets/table-reservation.jpg" alt="Chef preparing heritage dish"
+                    style="object-position: right;">
+            </div>
+        </section>
+
+        <!-- SECTION 7: TESTIMONIALS (FILTERED) -->
+        <section class="heritage-testimonials">
+            <div class="container">
+                <h2 style="color: var(--ceramic-yellow);">Voices of Tradition</h2>
+                <div class="decorative-line" style="margin: 0 auto; background: rgba(255,255,255,0.2);"></div>
+
+                <div class="heritage-testi-grid">
+                    <div class="heritage-testi-card">
+                        <p class="heritage-testi-text">"I haven't tasted a Nihari this authentic since my grandmother's
+                            kitchen in Old Delhi. It brought tears to my eyes."</p>
+                        <div class="heritage-testi-author">— Aarav M., Cultural Historian</div>
+                    </div>
+                    <div class="heritage-testi-card">
+                        <p class="heritage-testi-text">"No foam, no nitrogen, no gimmicks. Just honest, powerful,
+                            incredible Indian food. A masterpiece."</p>
+                        <div class="heritage-testi-author">— Sarah Jenkins, Food Critic</div>
+                    </div>
+                    <div class="heritage-testi-card">
+                        <p class="heritage-testi-text">"The ambiance feels like a royal haveli. Eating here grounds you.
+                            It's strictly for those who respect the craft."</p>
+                        <div class="heritage-testi-author">— Vikram Sethi</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: HERITAGE DINING HOUSES -->
+        <section class="heritage-locations">
+            <div class="container">
+                <h2 class="section-title">Our Heritage Dining Houses</h2>
+                <p class="section-subtitle">Architectural tributes to the regions we serve.</p>
+
+                <div class="cuisine-grid">
+                    <div class="cuisine-card">
+                        <div class="card-img-wrapper"><img src="./assets/dine1.jpg" alt="Jaipur Palace"></div>
+                        <div class="card-info">
+                            <h3>Jaipur</h3>
+                            <p>Modeled after the Amber Fort, featuring sandstone arches.</p>
+                            <a href="booking.html" class="card-tag">Book Heritage Table</a>
+                        </div>
+                    </div>
+                    <div class="cuisine-card">
+                        <div class="card-img-wrapper"><img src="./assets/dine2.jpg" alt="Chettinad Mansion"></div>
+                        <div class="card-info">
+                            <h3>Chennai</h3>
+                            <p>A restored Chettinad mansion with open courtyards.</p>
+                            <a href="booking.html" class="card-tag">Book Heritage Table</a>
+                        </div>
+                    </div>
+                    <div class="cuisine-card">
+                        <div class="card-img-wrapper"><img src="./assets/dine3.jpg" alt="Colonial Hall"></div>
+                        <div class="card-info">
+                            <h3>Mumbai</h3>
+                            <p>High ceilings and chandeliers invoking the colonial era.</p>
+                            <a href="booking.html" class="card-tag">Book Heritage Table</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9: FINAL CTA -->
+        <section class="heritage-final-cta">
+            <div class="container">
+                <h2>Experience Indian cuisine the way it was meant to be.</h2>
+                <div style="margin-top: 40px;">
+                    <a href="booking.html" class="btn-heritage-primary">Reserve Table</a>
+                    <a href="menu.html" class="btn-heritage-secondary">View Heritage Menu</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-column footer-brand">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <img src="./assets/logo.png" alt="Woods & Spices Logo" style="height: 50px;">
+                        <span class="brand-name">WOODS & SPICES</span>
+                    </a>
+                </div>
+                <p>Every dish we serve is crafted with care, flavor, and heart. Experience the true essence of fine
+                    dining.</p>
+            </div>
+            <div class="footer-column footer-links">
+
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+                    <li><a href="menu.html"><i class="fa-solid fa-chevron-right"></i> Menu</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Services</a></li>
+                    <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-links">
+                <h3>Contact Us</h3>
+                <p style="margin: 10px 0px;"><i class="fa-solid fa-location-dot"></i> Mount Road, Mylapore, Chennai</p>
+                <p style="margin: 10px 0px;"><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fa-solid fa-envelope"></i> hello@woodandspice.com</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-column footer-links">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get the latest updates and offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">GO</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Woods & Spices. All Rights Reserved.</p>
+              </div>
+    </footer>
+
+    <!-- Authentication Modal -->
+    <div id="authModal" class="auth-modal">
+        <div class="auth-modal-content">
+            <span class="auth-close">&times;</span>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form">
+                <h2>Login</h2>
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group password-field">
+                    <label for="loginPassword">Password:</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="loginPassword" required>
+                        <i class="fa-solid fa-eye-slash toggle-password" data-target="loginPassword"></i>
+                    </div>
+                </div>
+                <button type="submit" class="auth-btn">Login</button>
+                <p id="loginError" class="error-message"></p>
+
+                <div class="auth-divider">
+                    <span>OR</span>
+                </div>
+
+                <div class="social-auth-buttons">
+                    <button type="button" class="social-btn google-btn" onclick="auth.socialLogin('google')">
+                        <i class="fa-brands fa-google"></i>
+                        <span>Continue with Google</span>
+                    </button>
+                    <button type="button" class="social-btn apple-btn" onclick="auth.socialLogin('apple')">
+                        <i class="fa-brands fa-apple"></i>
+                        <span>Continue with Apple</span>
+                    </button>
+                </div>
+
+                <p class="switch-form">Don't have an account? <a href="#" onclick="auth.showSignupForm()">Sign up</a>
+                </p>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="auth-form" style="display: none;">
+                <h2>Sign Up</h2>
+                <div class="form-group">
+                    <label for="signupName">Name:</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group password-field">
+                    <label for="signupPassword">Password:</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="signupPassword" required>
+                        <i class="fa-solid fa-eye-slash toggle-password" data-target="signupPassword"></i>
+                    </div>
+                </div>
+                <div class="form-group password-field">
+                    <label for="signupConfirmPassword">Confirm Password:</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="signupConfirmPassword" required>
+                        <i class="fa-solid fa-eye-slash toggle-password" data-target="signupConfirmPassword"></i>
+                    </div>
+                </div>
+                <button type="submit" class="auth-btn">Sign Up</button>
+                <p id="signupError" class="error-message"></p>
+
+                <div class="auth-divider">
+                    <span>OR</span>
+                </div>
+
+                <div class="social-auth-buttons">
+                    <button type="button" class="social-btn google-btn" onclick="auth.socialLogin('google')">
+                        <i class="fa-brands fa-google"></i>
+                        <span>Continue with Google</span>
+                    </button>
+                    <button type="button" class="social-btn apple-btn" onclick="auth.socialLogin('apple')">
+                        <i class="fa-brands fa-apple"></i>
+                        <span>Continue with Apple</span>
+                    </button>
+                </div>
+
+                <p class="switch-form">Already have an account? <a href="#" onclick="auth.showLoginForm()">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/contact.js"></script>
+</body>
+
+</html>

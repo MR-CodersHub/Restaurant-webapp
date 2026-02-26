@@ -1,0 +1,401 @@
+/* ========================================
+   MODERN CARD DESIGN WITH ANIMATIONS
+   ======================================== */
+
+/* Fade-in Animation for Cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Grid Layout - Fixed 3 Columns */
+.cuisine-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Modern Card Container */
+.cuisine-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  animation: fadeInUp 0.6s ease-out backwards;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Stagger animation delay for each card */
+.cuisine-card:nth-child(1) { animation-delay: 0.1s; }
+.cuisine-card:nth-child(2) { animation-delay: 0.2s; }
+.cuisine-card:nth-child(3) { animation-delay: 0.3s; }
+.cuisine-card:nth-child(4) { animation-delay: 0.4s; }
+.cuisine-card:nth-child(5) { animation-delay: 0.5s; }
+.cuisine-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Hover Effects */
+.cuisine-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(148, 27, 12, 0.15);
+  border-color: rgba(148, 27, 12, 0.2);
+}
+
+/* Accent Line on Top */
+.cuisine-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--auburn), var(--hunyadi-yellow));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.cuisine-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Card Image Wrapper */
+.card-img-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+}
+
+/* Image with Ken Burns Effect */
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(0.95);
+}
+
+.cuisine-card:hover .card-img-wrapper img {
+  transform: scale(1.1) rotate(1deg);
+  filter: brightness(1);
+}
+
+/* Image Overlay */
+.card-img-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.cuisine-card:hover .card-img-wrapper::after {
+  opacity: 1;
+}
+
+/* Card Content */
+.card-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 22px;
+  gap: 12px;
+  position: relative;
+  background: white;
+}
+
+/* Icon with Animation */
+.card-icon {
+  font-size: 1.8rem;
+  color: var(--auburn);
+  margin-bottom: 6px;
+  transition: all 0.4s ease;
+  display: inline-block;
+  width: fit-content;
+}
+
+.cuisine-card:hover .card-icon {
+  transform: scale(1.15) rotate(5deg);
+  color: var(--hunyadi-yellow);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+/* Date/Meta Info */
+.card-info span {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--auburn);
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(148, 27, 12, 0.08);
+  border-radius: 20px;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.cuisine-card:hover .card-info span {
+  background: rgba(148, 27, 12, 0.15);
+  transform: translateX(5px);
+}
+
+/* Card Title */
+.card-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--coffee-bean);
+  margin: 0;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+.card-info h3::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--auburn), var(--hunyadi-yellow));
+  transition: width 0.4s ease;
+}
+
+.cuisine-card:hover .card-info h3::after {
+  width: 100%;
+}
+
+.cuisine-card:hover .card-info h3 {
+  color: var(--auburn);
+}
+
+/* Card Description */
+.card-info p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+  transition: color 0.3s ease;
+}
+
+.cuisine-card:hover .card-info p {
+  color: #333;
+}
+
+/* Modern Button/Link */
+.card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: center;
+  margin-top: auto;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--auburn) 0%, var(--dark-garnet) 100%);
+  color: white;
+  text-decoration: none;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(148, 27, 12, 0.2);
+}
+
+/* Button Shimmer Effect */
+.card-tag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.card-tag:hover::before {
+  left: 100%;
+}
+
+/* Arrow Icon */
+.card-tag::after {
+  content: '→';
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.card-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(148, 27, 12, 0.35);
+  background: linear-gradient(135deg, var(--dark-garnet) 0%, #4a0f08 100%);
+}
+
+.card-tag:hover::after {
+  transform: translateX(5px);
+}
+
+.card-tag:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(148, 27, 12, 0.2);
+}
+
+/* Loading Skeleton (Optional) */
+.cuisine-card.loading {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 75%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .cuisine-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .card-img-wrapper {
+    height: 180px;
+  }
+  
+  .card-info {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cuisine-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .card-img-wrapper {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cuisine-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 15px;
+  }
+  
+  .card-img-wrapper {
+    height: 220px;
+  }
+  
+  .card-info {
+    padding: 25px;
+  }
+  
+  .card-info h3 {
+    font-size: 1.35rem;
+  }
+  
+  .card-tag {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-img-wrapper {
+    height: 200px;
+  }
+  
+  .card-info {
+    padding: 20px;
+  }
+  
+  .card-info h3 {
+    font-size: 1.25rem;
+  }
+  
+  .card-icon {
+    font-size: 1.6rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .cuisine-card,
+  .card-img-wrapper img,
+  .card-tag,
+  .card-icon {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .cuisine-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  
+  .card-tag {
+    display: none;
+  }
+}

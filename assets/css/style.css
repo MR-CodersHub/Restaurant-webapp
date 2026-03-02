@@ -134,11 +134,10 @@ h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.5rem;
-  color: var(--vanilla);
-  letter-spacing: 3px;
-  transition: opacity 0.3s ease;
+  color: var(--ceramic-yellow);
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
   white-space: nowrap;
-  /* Prevent wrapping on desktop */
 }
 
 .logo-link {
@@ -2622,7 +2621,7 @@ h2.section-title {
   }
 
   .brand-name {
-    font-size: 1rem;
+    font-size: 1.1rem;
     letter-spacing: 1px;
   }
 
@@ -4318,12 +4317,11 @@ h2.section-title {
   }
 
   .brand-name {
-    font-size: 0.9rem;
+    font-size: 1rem;
     letter-spacing: 0.5px;
-    max-width: 140px;
-    /* Prevent overflow on 320px */
-    overflow: hidden;
-    text-overflow: ellipsis;
+    max-width: none;
+    overflow: visible;
+    text-overflow: clip;
   }
 
   .nav-actions {
@@ -5835,9 +5833,11 @@ h2.section-title {
     grid-template-columns: 1fr;
     /* Stack vertically */
     gap: 40px;
-    text-align: center;
+    text-align: left;
+    /* Align to same side as header (usually left) */
   }
 }
+
 
 /* Column general styles */
 .footer-column {
@@ -5852,8 +5852,8 @@ h2.section-title {
 
 @media (max-width: 576px) {
   .footer-brand {
-    align-items: center;
-    /* center on mobile */
+    align-items: flex-start;
+    /* Aligned to left on mobile for consistency with header */
   }
 }
 
@@ -5870,11 +5870,27 @@ h2.section-title {
   width: auto;
 }
 
+@media (max-width: 1024px) {
+
+  .logo img,
+  .footer-brand .logo-link img {
+    height: 38px !important;
+    /* Enforce consistent height */
+  }
+}
+
+@media (max-width: 576px) {
+
+  .logo img,
+  .footer-brand .logo-link img {
+    height: 35px !important;
+    /* Enforce consistent height */
+  }
+}
+
 .footer-brand .brand-name {
+  /* Inherits global brand-name styles for consistency */
   color: var(--ceramic-yellow, #e09f3e);
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
 }
 
 .footer-brand p {
@@ -5887,8 +5903,8 @@ h2.section-title {
 
 @media (max-width: 576px) {
   .footer-brand p {
-    text-align: center;
-    /* Center brand description on mobile */
+    text-align: left;
+    /* Left align on mobile */
   }
 }
 
@@ -5915,8 +5931,9 @@ h2.section-title {
 
 @media (max-width: 576px) {
   .footer-column h3::after {
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    /* Keep underline on left */
+    transform: none;
   }
 }
 

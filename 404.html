@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Table Not Found | Woods & Spices</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4d12bdc1ee.js" crossorigin="anonymous" defer></script>
+    
+    <style>
+        :root {
+            --primary-gold: #c5a059;
+            --deep-black: #0a0a0a;
+            --accent-red: #8b0000;
+            --text-gray: rgba(255, 255, 255, 0.7);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--deep-black);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Hero Background with Overlay */
+        .viewport-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.95)), 
+                        url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        /* Brand Header */
+        .brand-header {
+            padding: 40px;
+            text-align: center;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .brand-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--primary-gold);
+            border-bottom: 1px solid var(--primary-gold);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Main Content */
+        .error-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .error-num {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(8rem, 20vw, 12rem);
+            font-weight: 700;
+            line-height: 0.8;
+            margin-bottom: 10px;
+            background: linear-gradient(to bottom, #fff, var(--primary-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0.9;
+        }
+
+        .status-tag {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+        }
+
+        .message-box {
+            max-width: 500px;
+            margin-bottom: 40px;
+        }
+
+        .message-box h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .message-box p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* Modernized Button */
+        .cta-button {
+            position: relative;
+            padding: 18px 45px;
+            background: transparent;
+            color: #fff;
+            text-decoration: none;
+            border: 1px solid var(--primary-gold);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            transition: 0.4s all;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            background: var(--primary-gold);
+            color: #000;
+            box-shadow: 0 0 30px rgba(197, 160, 89, 0.4);
+        }
+
+        /* Floating Animation Elements */
+        .spice-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--primary-gold);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 15s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            50% { opacity: 0.5; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        @media (max-width: 768px) {
+            .message-box h1 { font-size: 1.8rem; }
+            .error-num { font-size: 6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="viewport-bg"></div>
+
+    <div class="spice-particle" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="spice-particle" style="left: 30%; animation-delay: 5s;"></div>
+    <div class="spice-particle" style="left: 70%; animation-delay: 2s;"></div>
+    <div class="spice-particle" style="left: 90%; animation-delay: 8s;"></div>
+
+    <header class="brand-header">
+        <a href="index.html"><h2>Woods & Spices</h2></a>
+    </header>
+
+    <main class="error-container">
+        <div class="status-tag">Error Occurred</div>
+        <div class="error-num">404</div>
+        
+        <div class="message-box">
+            <h1>The table is not set.</h1>
+            <p>Our apologies, but the flavor profile you're seeking isn't in our kitchen today. The page may have been moved to a new collection or removed from the menu.</p>
+        </div>
+
+        <a href="index.html" class="cta-button">
+            Back to the Restaurant <i class="fa-solid fa-arrow-right-long" style="margin-left: 10px;"></i>
+        </a>
+    </main>
+
+</body>
+</html>

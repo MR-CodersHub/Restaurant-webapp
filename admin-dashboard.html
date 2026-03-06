@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin Dashboard - Woods & Spices Restaurant Management">
+    <title>Admin Dashboard | Woods & Spices</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/contact-premium.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4d12bdc1ee.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body>
+    <header role="banner">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="./assets/logo.png" alt="Woods & Spices Restaurant Logo">
+                    <span class="brand-name">WOODS & SPICES</span>
+                </a>
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <ul class="nav-links" role="menubar">
+                <li class="mobile-close"><label for="nav-toggle" class="close-btn">&times;</label></li>
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                <li role="none"><a href="about.html" role="menuitem">About Us</a></li>
+                <li role="none"><a href="menu.html" role="menuitem">Menu</a></li>
+                <li role="none"><a href="index.html#dine" role="menuitem">Dine In</a></li>
+                <li role="none"><a href="index.html#contact" role="menuitem">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="./cart.html" class="cart-link" role="button" aria-label="Shopping cart">
+                    <i class="fa-solid fa-cart-arrow-down" aria-hidden="true"></i>
+                    <span class="cart-badge" aria-live="polite">0</span>
+                </a>
+                <button class="account-btn" aria-label="Admin account" id="accountBtn">
+                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                </button>
+                <label for="nav-toggle" class="nav-toggle-label" aria-label="Open Menu">
+                    <span></span>
+                </label>
+            </div>
+            <div class="user-dropdown" role="menu" aria-label="Admin menu" id="userDropdown">
+                <button type="button" data-action="dashboard">Dashboard</button>
+                <button type="button" data-action="logout">Logout</button>
+            </div>
+
+            <div class="nav-overlay"></div>
+        </nav>
+    </header>
+
+    <div class="dashboard-wrapper">
+        <aside class="admin-sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Admin Panel</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active"><a href="#"><i class="fa-solid fa-chart-line"></i> Overview</a></li>
+                <li><a href="#"><i class="fa-solid fa-users"></i> Users</a></li>
+                <li><a href="#"><i class="fa-solid fa-calendar-check"></i> Reservations</a></li>
+                <li><a href="./menu.html"><i class="fa-solid fa-utensils"></i> Menu Items</a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Live Orders</a></li>
+                <li><a href="#"><i class="fa-solid fa-cog"></i> Settings</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-main">
+            <header class="content-header">
+                <h2>Welcome Back, Manager</h2>
+                <p>Here is what's happening at Woods & Spices today.</p>
+            </header>
+
+            <div class="stats-row">
+                <div class="stat-box">
+                    <span class="stat-label">Daily Revenue</span>
+                    <span class="stat-value">$1,240</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">New Orders</span>
+                    <span class="stat-value">14</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Pending Tables</span>
+                    <span class="stat-value">3</span>
+                </div>
+            </div>
+
+            <div class="dashboard-grid" style="display: block;">
+                <!-- Users Section -->
+                <section id="users-section" class="dashboard-section" style="margin-bottom: 40px;">
+                    <h3 style="margin-bottom: 20px; color: var(--auburn);">Registered Users</h3>
+                    <div style="overflow-x: auto;">
+                        <table class="data-table"
+                            style="width: 100%; border-collapse: collapse; background: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                            <thead>
+                                <tr style="background: var(--auburn); color: white;">
+                                    <th style="padding: 12px; text-align: left;">ID</th>
+                                    <th style="padding: 12px; text-align: left;">Name</th>
+                                    <th style="padding: 12px; text-align: left;">Email</th>
+                                    <th style="padding: 12px; text-align: left;">Role</th>
+                                    <th style="padding: 12px; text-align: left;">Joined</th>
+                                </tr>
+                            </thead>
+                            <tbody id="users-table-body">
+                                <!-- Users populated via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Blogs Section -->
+                <section id="blogs-section" class="dashboard-section">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h3 style="color: var(--auburn);">Manage Blogs</h3>
+                        <button id="addBlogBtn" class="btn"
+                            style="background: var(--oxblood); color: white; border: none; cursor: pointer;">+ Add New
+                            Blog</button>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;"
+                        id="blogs-grid">
+                        <!-- Blogs populated via JS -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- Add Blog Modal -->
+            <div id="blogModal" class="modal"
+                style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center;">
+                <div class="modal-content"
+                    style="background: white; padding: 30px; border-radius: 8px; width: 90%; max-width: 500px; position: relative;">
+                    <span class="close-modal"
+                        style="position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer;">&times;</span>
+                    <h2 style="color: var(--auburn); margin-bottom: 20px;">Create New Blog Post</h2>
+                    <form id="createBlogForm">
+                        <div style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Title</label>
+                            <input type="text" id="blogTitle" required
+                                style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Content</label>
+                            <textarea id="blogContent" rows="5" required
+                                style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Image</label>
+                            <input type="file" id="blogImage" accept="image/*" style="width: 100%;">
+                        </div>
+                        <button type="submit" class="btn"
+                            style="width: 100%; background: var(--auburn); color: white; border: none;">Publish
+                            Post</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-column footer-brand">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <img src="./assets/logo.png" alt="Woods & Spices Logo" style="height: 50px;">
+                        <span class="brand-name">WOODS & SPICES</span>
+                    </a>
+                </div>
+                <p>Every dish we serve is crafted with care, flavor, and heart. Experience the true essence of fine
+                    dining.</p>
+            </div>
+            <div class="footer-column footer-links">
+
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+                    <li><a href="menu.html"><i class="fa-solid fa-chevron-right"></i> Menu</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Services</a></li>
+                    <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-links">
+                <h3>Contact Us</h3>
+                <p style="margin: 10px 0px;"><i class="fa-solid fa-location-dot"></i> Mount Road, Mylapore, Chennai</p>
+                <p style="margin: 10px 0px;"><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fa-solid fa-envelope"></i> hello@woodandspice.com</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-column footer-links">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get the latest updates and offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">GO</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Woods & Spices. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;">Designed by <strong>MR CODERS HUB</strong></p>
+        </div>
+    </footer>
+    <script src="assets/js/admin-dashboard.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/nav-script.js"></script>
+</body>
+
+</html>

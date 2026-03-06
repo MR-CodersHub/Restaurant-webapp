@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Woods & Spices - Reservations, Inquiries, and Feedback. We'd love to hear from you.">
+    <title>Contact Us | Woods & Spices</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/contact-premium.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4d12bdc1ee.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body>
+    <header role="banner">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="./assets/logo.png" alt="Woods & Spices Restaurant Logo">
+                    <span class="brand-name">WOODS & SPICES</span>
+                </a>
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <ul class="nav-links" role="menubar">
+                <li class="mobile-close"><label for="nav-toggle" class="close-btn">&times;</label></li>
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                <li role="none"><a href="heritage.html" role="menuitem">Home2</a></li>
+                <li role="none"><a href="about.html" role="menuitem">About</a></li>
+                <li role="none"><a href="menu.html" role="menuitem">Menu</a></li>
+                <li role="none"><a href="services.html" role="menuitem">Services</a></li>
+                <li role="none"><a href="home-2.html" role="menuitem">Catering</a></li>
+                <li role="none"><a href="blog.html" role="menuitem">Blog</a></li>
+                <li role="none"><a href="contact.html" class="active" role="menuitem">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="./cart.html" class="cart-link" role="button" aria-label="Shopping cart">
+                    <i class="fa-solid fa-cart-arrow-down" aria-hidden="true"></i>
+                   
+                </a>
+                <button class="account-btn" aria-label="User account" id="accountBtn">
+                    <i class="fa-solid fa-user" aria-hidden="true"></i>
+                </button>
+                <label for="nav-toggle" class="nav-toggle-label" aria-label="Open Menu">
+                    <span></span>
+                </label>
+            </div>
+            <div class="user-dropdown" role="menu" aria-label="User menu" id="userDropdown">
+                <button type="button" data-action="login">Login</button>
+                <button type="button" data-action="signup">Sign Up</button>
+                <button type="button" data-action="dashboard" style="display: none;">Dashboard</button>
+                <button type="button" data-action="logout" style="display: none;">Logout</button>
+            </div>
+
+            <div class="nav-overlay"></div>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="page-banner">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Contact</span>
+            </div>
+            <h1>Get in Touch</h1>
+            <p>We'd love to hear from you — reservations, events, or feedback.</p>
+        </section>
+
+        <section class="contact-wrapper">
+            <div class="contact-main-container">
+                <!-- Left Side: Form -->
+                <div class="contact-form-side">
+                    <h2 class="form-header">Send us a Message</h2>
+                    <p class="form-subheader">Fill out the form below and our team will get back to you within 24 hours.
+                    </p>
+                    <form class="minimal-form">
+                        <div class="dual-row">
+                            <div class="input-block">
+                                <label>Name</label>
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="input-block">
+                                <label>Email</label>
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="input-block">
+                            <label>Subject</label>
+                            <input type="text" placeholder="Inquiry Subject">
+                        </div>
+                        <div class="input-block">
+                            <label>Message</label>
+                            <textarea rows="5" placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn-send-inquiry">
+                            <span>SUBMIT INQUIRY</span>
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Side: Info -->
+                <div class="contact-info-side">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h3>Visit Us</h3>
+                                <p>Mount Road, Mylapore<br>Chennai, Tamil Nadu 600004</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h3>Email Us</h3>
+                                <p>
+                                    <a href="mailto:hello@woodandspice.com">hello@woodandspice.com</a>
+                                    <i class="fa-regular fa-copy copy-icon"
+                                        onclick="copyToClipboard('hello@woodandspice.com')"></i>
+                                    <br>
+                                    <a href="mailto:events@woodandspice.com">events@woodandspice.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h3>Call Us</h3>
+                                <p>
+                                    <a href="tel:+919876543210">+91 9876543210</a>
+                                    <i class="fa-regular fa-copy copy-icon"
+                                        onclick="copyToClipboard('+919876543210')"></i>
+                                    <br>
+                                    <a href="tel:+914412345678">+91 44 1234 5678</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="icon"><i class="fa-solid fa-clock"></i></div>
+                            <div>
+                                <h3>Business Hours</h3>
+                                <p>Weekdays: 9:00 AM - 10:00 PM<br>Weekends: 10:00 AM - 11:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Width Map Section -->
+        <section id="map-full" class="map-section-full" style="margin-bottom: 30px;">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15545.698380386221!2d80.2638361!3d13.0456101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sMylapore%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                loading="lazy">
+            </iframe>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-column footer-brand">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <img src="./assets/logo.png" alt="Woods & Spices Logo" style="height: 50px;">
+                        <span class="brand-name">WOODS & SPICES</span>
+                    </a>
+                </div>
+                <p>Every dish we serve is crafted with care, flavor, and heart. Experience the true essence of fine
+                    dining.</p>
+            </div>
+            <div class="footer-column footer-links">
+
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+                    <li><a href="menu.html"><i class="fa-solid fa-chevron-right"></i> Menu</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Services</a></li>
+                    <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column footer-links">
+                <h3>Contact Us</h3>
+                <p style="margin: 10px 0px;"><i class="fa-solid fa-location-dot"></i> Mount Road, Mylapore, Chennai</p>
+                <p style="margin: 10px 0px;"><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fa-solid fa-envelope"></i> hello@woodandspice.com</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-column footer-links">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get the latest updates and offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">GO</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Woods & Spices. All Rights Reserved.</p>
+               </div>
+    </footer>
+   
+    <!-- Authentication Modal -->
+    <div id="authModal" class="auth-modal">
+        <div class="auth-modal-content">
+            <span class="auth-close">&times;</span>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form">
+                <h2>Login</h2>
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group password-field">
+                    <label for="loginPassword">Password:</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="loginPassword" required>
+                        <i class="fa-solid fa-eye-slash toggle-password" data-target="loginPassword"></i>
+                    </div>
+                </div>
+                <button type="submit" class="auth-btn">Login</button>
+                <p id="loginError" class="error-message"></p>
+
+                <div class="auth-divider">
+                    <span>OR</span>
+                </div>
+
+                <div class="social-auth-buttons">
+                    <button type="button" class="social-btn google-btn" onclick="auth.socialLogin('google')">
+                        <i class="fa-brands fa-google"></i>
+                        <span>Continue with Google</span>
+                    </button>
+                    <button type="button" class="social-btn apple-btn" onclick="auth.socialLogin('apple')">
+                        <i class="fa-brands fa-apple"></i>
+                        <span>Continue with Apple</span>
+                    </button>
+                </div>
+
+                <p class="switch-form">Don't have an account? <a href="#" onclick="auth.showSignupForm()">Sign up</a>
+                </p>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="auth-form" style="display: none;">
+                <h2>Sign Up</h2>
+                <div class="form-group">
+                    <label for="signupName">Name:</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group password-field">
+                    <label for="signupPassword">Password:</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="signupPassword" required>
+                        <i class="fa-solid fa-eye-slash toggle-password" data-target="signupPassword"></i>
+                    </div>
+                </div>
+                <div class="form-group password-field">
+                    <label for="signupConfirmPassword">Confirm Password:</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="signupConfirmPassword" required>
+                        <i class="fa-solid fa-eye-slash toggle-password" data-target="signupConfirmPassword"></i>
+                    </div>
+                </div>
+                <button type="submit" class="auth-btn">Sign Up</button>
+                <p id="signupError" class="error-message"></p>
+
+                <div class="auth-divider">
+                    <span>OR</span>
+                </div>
+
+                <div class="social-auth-buttons">
+                    <button type="button" class="social-btn google-btn" onclick="auth.socialLogin('google')">
+                        <i class="fa-brands fa-google"></i>
+                        <span>Continue with Google</span>
+                    </button>
+                    <button type="button" class="social-btn apple-btn" onclick="auth.socialLogin('apple')">
+                        <i class="fa-brands fa-apple"></i>
+                        <span>Continue with Apple</span>
+                    </button>
+                </div>
+
+                <p class="switch-form">Already have an account? <a href="#" onclick="auth.showLoginForm()">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/contact.js"></script>
+</body>
+
+</html>
